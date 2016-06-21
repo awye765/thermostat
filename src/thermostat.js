@@ -32,7 +32,7 @@ Thermostat.prototype.isMinimumTemperature = function(){
   return this.temperature === this.MINIMUM_TEMPERATURE;
 };
 
-Thermostat.prototype.isPowerSavingModeOn = function({
+Thermostat.prototype.isPowerSavingModeOn = function(){
   return this.powerSavingMode;
 };
 
@@ -57,11 +57,11 @@ Thermostat.prototype.resetTemperature = function(){
 
 Thermostat.prototype.energyUsage = function(){
   if(this.temperature < this.LOW_ENERGY_LIMIT) {
-    return "Low";
+    return "low-usage";
   }
   else if (this.temperature < this.MEDIUM_ENERGY_LIMIT) {
-    return "Medium";
+    return "medium-usage";
   }
-  return "High";
+  return "high-usage";
 
 };

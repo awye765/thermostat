@@ -1,0 +1,14 @@
+.low-usage {
+  color: green;
+}
+/*0-17*/
+
+.medium-usage {
+  color: orange;
+}
+
+/*18-24*/
+.high-usage {
+  color: red;
+}
+/*25+*/
