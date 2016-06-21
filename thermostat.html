@@ -9,8 +9,7 @@
     <body>
       <h1>Thermostat</h1>
 
-      <h2>Current Temperature:</h2>
-      <h3 id="temperature">Current Temperature</h3>
+      <h2>Current Temperature: <span id="temperature">Current Temperature</h2>
 
       <button id="increase">+</button>
       <button id="decrease">-</button>
@@ -22,6 +21,25 @@
       <br />
       <button id="powersaving-on">Power Saving Mode ON</button>
       <button id="powersaving-off">Power Saving Mode OFF</button>
+
+      <section>
+        <h3>Current temperature in your city: <span id="current-temperature">20</span></h3>
+        <h4>Popular Cities</h4>
+          <select id="current-city">
+            <option value="london">London</option>
+            <option value="newyork">New York</option>
+            <option value="paris">Paris</option>
+            <option value="hongkong">Hong Kong</option>
+            <option value="tokyo">Tokyo</option>
+            <option value="cusco">Cusco</option>
+            <option value="hangroa">Hang Roa</option>
+          </select>
+        <h4>Can't find your city? Search for it here!</h4>
+          <form id="select-city">
+            <input id="current-city" type="text" placeholder="Enter a city" />
+            <input type="submit" />
+          </form>
+      </section>
 
     </body>
 </html>
