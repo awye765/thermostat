@@ -5,6 +5,8 @@ function Thermostat(){
   this.MINIMUM_TEMPERATURE = 10;
   this.PSM_ON_MAXIMUM_TEMPERATURE = 25;
   this.PSM_OFF_MAXIMUM_TEMPERATURE = 32;
+  this.LOW_ENERGY_LIMIT = 18;
+  this.MEDIUM_ENERGY_LIMIT = 25;
   this.powerSavingMode = true;
 }
 
@@ -53,12 +55,13 @@ Thermostat.prototype.resetTemperature = function(){
   this.temperature = 20;
 };
 
-Thermostat.prototype.colour = function(){
-  if(this.temperature < 18) {
-    return "Green";
+Thermostat.prototype.energyUsage = function(){
+  if(this.temperature < this.LOW_ENERGY_LIMIT) {
+    return "Low";
   }
-  else if (this.temperature < 25) {
-    return "Yellow";
+  else if (this.temperature < this.MEDIUM_ENERGY_LIMIT) {
+    return "Medium";
   }
-  return "Red";
+  return "High";
+
 };

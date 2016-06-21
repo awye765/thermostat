@@ -68,18 +68,18 @@ describe("Thermostat", function(){
     for(var i = 0; i < 3; i++) {
       thermostat.decreaseTemperature();
     }
-    expect(thermostat.colour()).toEqual("Green");
+    expect(thermostat.energyUsage()).toEqual("Low");
   });
 
   it("display is yellow when temperate below 25 but above 17", function() {
-    expect(thermostat.colour()).toEqual("Yellow");
+    expect(thermostat.energyUsage()).toEqual("Medium");
   });
 
   it("display is red when temperate above 24", function() {
     for(var i = 0; i < 5; i++) {
       thermostat.increaseTemperature();
     }
-    expect(thermostat.colour()).toEqual("Red");
+    expect(thermostat.energyUsage()).toEqual("High");
   });
 
 
