@@ -16,7 +16,7 @@ describe("Thermostat", function(){
     expect(thermostat.getCurrentTemperature()).toEqual(21);
   });
 
-  it("decreases temperature with the up button", function(){
+  it("decreases temperature with the down button", function(){
     thermostat.decreaseTemperature();
     expect(thermostat.getCurrentTemperature()).toEqual(19);
   });
